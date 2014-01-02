@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/eji/drink-counter-with-rfid/issues"
   },
-  "homepage": "https://github.com/eji/drink-counter-with-rfid"
+  "homepage": "https://github.com/eji/drink-counter-with-rfid",
+  "dependencies": {
+    "serialport": "~1.2.5"
+  }
 }
