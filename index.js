@@ -18,13 +18,13 @@ var inputSerial = new SerialPort("/dev/ttyO4", {  // P9.22(Serial)
   databits: 8,
   stopbits: 1,
   parity: 'none',
-  parser: serialport.parsers.readline("\n"), 
+  parser: serialport.parsers.readline("\r"), 
 });
 
 inputSerial.on("open", function() {
   console.log("opened tty");
   inputSerial.on('data', function(data) {
-    console.log("data: " + data);
+    console.log("data: " + data.replace(/^\s*|\s*$/g, ""));
   });
 });
 
